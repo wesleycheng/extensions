@@ -35,7 +35,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     func loadData() {
         cellItems = [
-            ["title": "View Border", "key": "border"]
+            ["title": "View Border", "key": "border"],
+            ["title": "String", "key": "string"]
         ]
         tableView.reloadData()
     }
@@ -44,6 +45,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         switch key ?? "" {
         case "border":
             let vc = BorderViewController()
+            self.navigationController?.pushViewController(vc, animated: true)
+        case "string":
+            let vc = StringViewController()
             self.navigationController?.pushViewController(vc, animated: true)
         default:
             break
