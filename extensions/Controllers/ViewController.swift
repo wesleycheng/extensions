@@ -36,7 +36,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func loadData() {
         cellItems = [
             ["title": "View Border", "key": "border"],
-            ["title": "String", "key": "string"]
+            ["title": "String", "key": "string"],
+            ["title": "Button", "key": "button"]
         ]
         tableView.reloadData()
     }
@@ -48,6 +49,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             self.navigationController?.pushViewController(vc, animated: true)
         case "string":
             let vc = StringViewController()
+            self.navigationController?.pushViewController(vc, animated: true)
+        case "button":
+            let vc = ButtonViewController()
             self.navigationController?.pushViewController(vc, animated: true)
         default:
             break

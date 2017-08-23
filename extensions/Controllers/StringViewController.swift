@@ -15,8 +15,8 @@ class StringViewController: UIViewController {
         super.viewDidLoad()
         self.title = "String"
         // Do any additional setup after loading the view.
-        
-        let content = "之所以会出现图1的情况是因为他将“xjhdhdhdhdhd......”这个字符串视为了一个“单词“, textView默认的排版是第一行文本容纳不下这个字符串的时候，自动换位第二行."
+
+        let content = "之所以会出现图1的情况是因为他将“xjhdhdhdhdhd......”这个字符串视为了一个“单词“, textView默认的排版是第一行文本容纳不下这个字符串的时候，自动换位第二行." + Date().string()
         let attr = content.attributes(color: UIColor.brown, font: UIFont.systemFont(ofSize: 16.0), lineSpacing: 10)
         contentLabel.border(borderWidth: 1, color: UIColor.blue)
         contentLabel.attributedText = attr.content
